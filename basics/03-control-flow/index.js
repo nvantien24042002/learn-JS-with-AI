@@ -4,3 +4,11 @@ if (age >=18) {
 }else{
     console.log("You are a minor")
 }
+
+if (age < 13) {
+    console.log("You are a child");
+}else if(age < 18) {
+    console.log("You are a teenager");
+}else {
+    console.log("You are an adult")
+}
