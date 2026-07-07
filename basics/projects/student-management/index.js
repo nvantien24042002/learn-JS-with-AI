@@ -10,11 +10,12 @@ addStudent("Pham Van A",12,10);
 addStudent("Ly Van C",21,10);
 // 2 Hàm hiển thị học sinh
 function showClassroom(){
-    console.log("--- DANH SÁCH LỚP ---");
+    console.log("--- CLASS STUDENT ---");
     for(let i = 0; i < classroom.length; i++){
         console.log("Student: ",classroom[i].name);
     }
 }
+// 3 Hàm tìm kiếm học sinh
 function findStudent(name){
     let found = false; // Mặc định không tìm thấy học sinh
     for(let i = 0;i<classroom.length;i++){
@@ -25,7 +26,20 @@ function findStudent(name){
         }
     }
     if (!found) {
-        console.log("Không tìm thấy học sinh này.");
+        console.log("No found student.");
     }
 }
 findStudent("Pham Van A")
+
+// Hàm xóa học sinh
+
+function removeStudent(name){
+    for (let i = 0; i < classroom.length; i++) {
+        if (classroom[i].name === name) {
+            classroom.splice(i, 1);
+            console.log(name + " deleted list .");
+            return;
+        }
+    }
+    console.log("No found student.");
+}
