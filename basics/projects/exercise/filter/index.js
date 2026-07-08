@@ -14,3 +14,13 @@ const evenNumber = numbers.filter(n=>n%2===0);
 const numberhon3 = numbers.filter(n=>n>3);
 console.log(evenNumber);
 console.log(numberhon3);
+
+// Bài tập 2.1 : Lọc dữ liệu phức tạp 
+const products = [
+    { name: "iPhone", price: 1000, category: "phone" },
+    { name: "Samsung", price: 800, category: "phone" },
+    { name: "Laptop", price: 1500, category: "computer" },
+    { name: "Mouse", price: 50, category: "accessory" }
+];
+const productFilter = products.filter(product=>product.category==="phone" && product.price < 900);
+console.log(productFilter);
