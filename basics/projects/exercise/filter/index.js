@@ -24,3 +24,13 @@ const products = [
 ];
 const productFilter = products.filter(product=>product.category==="phone" && product.price < 900);
 console.log(productFilter);
+// Bài tập 2.2 : Lọc tìm kiếm nâng cao 
+const users = [
+    { name: "An", age: 25 },
+    { name: "Bình", age: 30 },
+    { name: "Chi", age: 22 },
+    { name: "Dũng", age: 28 }
+];
+const keyword = "n";
+const result = users.filter(user=>user.name.toLowerCase().includes(keyword.toLowerCase()));
+console.log(result);

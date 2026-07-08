@@ -20,3 +20,5 @@ const emailFilter = emails.filter(email=>email.includes("gmail"));
 console.log(emailFilter);
 const myHobbies = ["đọc sách", "chơi game", "nấu ăn"];
 console.log(myHobbies.includes("chơi game"))   //true
+
+
