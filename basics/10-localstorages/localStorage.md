@@ -5,7 +5,6 @@ localStorage.setItem("username", "Nguyen Van A");
 localStorage.setItem("data", JSON.stringify({ id: 1, name: "B" }));
 2. getItem(key)
 Dùng để lấy giá trị ra từ trình duyệt dựa trên khóa.
-
 Lưu ý: Trả về null nếu khóa không tồn tại. Với Object/Array, phải dùng JSON.parse() để chuyển đổi ngược lại.
 const user = localStorage.getItem("username");
 const data = JSON.parse(localStorage.getItem("data"));
@@ -15,3 +14,6 @@ localStorage.removeItem("username");
 4. clear()
 Dùng để xóa toàn bộ dữ liệu đã lưu trong trang web hiện tại.
 localStorage.clear();
+5. key(index)
+Trả về tên của khóa nằm ở vị trí thứ index trong danh sách lưu trữ.
+let firstKey = localStorage.key(0);
