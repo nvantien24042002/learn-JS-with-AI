@@ -13,3 +13,10 @@ Với Mảng (Array):
 const fruits = ["táo","chuối","cam"];
 console.log(fruits.includes("ổi"));
 console.log(fruits.includes("táo"));
+// Bài tập A (Chuỗi):
+const emails = ["user1@gmail.com", "admin@yahoo.com", "guest@outlook.com"];
+
+const emailFilter = emails.filter(email=>email.includes("gmail"));
+console.log(emailFilter);
+const myHobbies = ["đọc sách", "chơi game", "nấu ăn"];
+console.log(myHobbies.includes("chơi game"))   //true
