@@ -24,3 +24,9 @@ const employees = [
 
 const nameEmployess = employees.map(employee=>employee.name);
 console.log(nameEmployess);
+
+// Bài 3 Spread Operator (...)
+
+const oldArray = [1,2,3];
+const newArray = [...oldArray,4,5];
+console.log(newArray);
