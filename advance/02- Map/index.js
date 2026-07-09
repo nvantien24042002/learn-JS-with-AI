@@ -15,3 +15,12 @@ const prices = [100, 200, 300];
 
 const discountPrice = prices.map(price =>(price*0.9));
 console.log(discountPrice);
+// Bài 2 : Trích xuất tên nhân viên
+const employees = [
+    { id: 1, name: "An", role: "Developer" },
+    { id: 2, name: "Bình", role: "Designer" },
+    { id: 3, name: "Chi", role: "Manager" }
+];
+
+const nameEmployess = employees.map(employee=>employee.name);
+console.log(nameEmployess);
