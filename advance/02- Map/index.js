@@ -58,3 +58,14 @@ const result = employees
     .map(emp => `Nhân viên: ${emp.name} - Vai trò: ${emp.role}`); // Biến đổi thành chuỗi
 
 console.log(result);
+const products = [
+    {name:"Laptop",price:1000},
+    {name:"Mouse",price:20},
+    {name:"Keyboard",price:50},
+    {name:"Monitor",price:200},
+]
+const filterPrice = products
+    .filter(product=>product.price > 50) // Lọc ra các sản phẩm có giá > 50
+    .map(product=>product.name);
+
+console.log(filterPrice);
