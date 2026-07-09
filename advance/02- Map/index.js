@@ -16,17 +16,45 @@ const prices = [100, 200, 300];
 const discountPrice = prices.map(price =>(price*0.9));
 console.log(discountPrice);
 // Bài 2 : Trích xuất tên nhân viên
-const employees = [
-    { id: 1, name: "An", role: "Developer" },
-    { id: 2, name: "Bình", role: "Designer" },
-    { id: 3, name: "Chi", role: "Manager" }
-];
+// const employees = [
+//     { id: 1, name: "An", role: "Developer" },
+//     { id: 2, name: "Bình", role: "Designer" },
+//     { id: 3, name: "Chi", role: "Manager" }
+// ];
 
-const nameEmployess = employees.map(employee=>employee.name);
-console.log(nameEmployess);
+// const nameEmployess = employees.map(employee=>employee.name);
+// console.log(nameEmployess);
 
 // Bài 3 Spread Operator (...)
 
 const oldArray = [1,2,3];
 const newArray = [...oldArray,4,5];
 console.log(newArray);
+// Bài 4 Gộp mảng cơ bản 
+const fruits = ["táo","chuối"];
+const vegetables = ["cà rốt","súp lơ"];
+const food = [...fruits,...vegetables];
+console.log(food)
+// Bài 5 Cập nhật thông tin User 
+const user = {name:"An",age:25,role:"Admin"};
+const updatedUser = { ...user, age: 26 };
+console.log(updatedUser);
+
+const employees = [
+    { id: 1, name: "An", role: "Developer" },
+    { id: 2, name: "Bình", role: "Designer" },
+    { id: 3, name: "Chi", role: "Manager" }
+];
+const newEmployees = employees.map(emp=>{
+    if (emp.id === 2) {
+        return { ...emp, role: "Senior Designer" }; // Tạo bản sao và sửa role
+    }
+    return emp; // Trả về nguyên bản nếu không phải người cần sửa
+})
+console.log(newEmployees);
+// Chaining: Filter -> Map
+const result = employees
+    .filter(emp => emp.id % 2 === 0) // Lọc id chẵn (Bình, Dũng)
+    .map(emp => `Nhân viên: ${emp.name} - Vai trò: ${emp.role}`); // Biến đổi thành chuỗi
+
+console.log(result);
