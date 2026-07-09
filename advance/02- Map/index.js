@@ -53,11 +53,11 @@ const newEmployees = employees.map(emp=>{
 })
 console.log(newEmployees);
 // Chaining: Filter -> Map
-const result = employees
-    .filter(emp => emp.id % 2 === 0) // Lọc id chẵn (Bình, Dũng)
-    .map(emp => `Nhân viên: ${emp.name} - Vai trò: ${emp.role}`); // Biến đổi thành chuỗi
+// const result = employees
+//     .filter(emp => emp.id % 2 === 0) // Lọc id chẵn (Bình, Dũng)
+//     .map(emp => `Nhân viên: ${emp.name} - Vai trò: ${emp.role}`); // Biến đổi thành chuỗi
 
-console.log(result);
+// console.log(result);
 const products = [
     {name:"Laptop",price:1000},
     {name:"Mouse",price:20},
@@ -65,7 +65,28 @@ const products = [
     {name:"Monitor",price:200},
 ]
 const filterPrice = products
-    .filter(product=>product.price > 50) // Lọc ra các sản phẩm có giá > 50
+    .filter(product=>product.price > 50)
     .map(product=>product.name);
 
 console.log(filterPrice);
+
+
+
+const inventory = [
+    {id:1,name:"Laptop",category:"Electronics",price:1200,stock:5},
+    {id:2,name:"Phone",category:"Electronics",price:800,stock:0},
+    {id:3,name:"Shirt",category:"Clothing",price:50,stock:10},
+    {id:4,name:"Headphones",category:"Electronics",price:150,stock:3},  
+    {id:5,name:"Shoes",category:"Clothing",price:100,stock:2},  
+]
+const result = inventory
+    // 1. Filter: Electronics AND in stock
+    .filter(item =>item.category === "Electronics" && item.stock > 0)
+    // 2 Mapp: add tax 
+    .map(item => ({...item,priceWithTax:item.price*1.1}))
+    // 3. Sort: By price ascending
+    .sort((a, b) => a.price - b.price)
+    // 4. Map: Format as string
+    .map(item => `Tên sản phẩm: ${item.name} - Giá sau thuế: ${item.priceWithTax.toFixed(2)}$`);
+
+console.log(result);
